@@ -1,0 +1,135 @@
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 90%);
+}
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: var(--grayish-blue);
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    max-width: 520px;
+    width: 90%;
+    display: grid;
+    gap: 0;
+    grid-template-rows: 250px 250px 250px;
+    grid-template-areas: 
+    "a"
+    "b"
+    "c";
+    margin: 70px auto auto auto;
+    box-shadow: 2px 2px 10px rgba(71, 126, 125, 0.411);
+}
+
+.item-a, .item-b, .item-c {
+    /* top right bottom left */
+    padding: 20px 30px 10px 30px;
+}
+
+.item-a {
+    grid-area: a;
+    background-color: white;
+    border-radius: 5px 5px 0 0;
+    line-height: 1.9em;
+}
+
+.item-a h2 {
+    color:  hsl(179, 62%, 43%);
+}
+
+.item-a h3 {
+    color: hsl(71, 73%, 54%);
+    margin-bottom: 10px;
+}
+
+.item-a p {
+    color: hsl(206, 25%, 71%);
+}
+
+.item-b {
+    grid-area: b;
+    background-color: hsl(179, 70%, 43%);
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.price {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.price p {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.price span {
+    color: hsl(204, 43%, 80%);
+    font-size: 1em;
+    align-self: center;
+    padding: 10px;
+}
+
+button {
+    width:100%;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: hsl(71, 73%, 54%);
+    color: white;
+    border: transparent;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 700;
+    font-family: 'Karla', sans-serif;
+    letter-spacing: 1px;
+    box-shadow: 3px 3px 10px rgba(71, 126, 125, 0.7);
+}
+
+.item-c {
+    grid-area: c;
+    background-color: hsla(179, 75%, 43%, 0.70);
+    border-radius: 0 0 5px 5px;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 5px;
+    color: hsl(206, 32%, 91%);
+    font-size: 0.9em;
+    padding-left: 0;
+}
+
+@media only screen and (min-width: 800px) {
+    .item-b {
+        border-radius: 0 0 0 5px;
+    }
+
+    .item-c {
+        border-radius: 0 0 5px 0;
+    }
+
+    .container {
+        max-width: 750px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 3fr;
+        grid-template-areas: 
+        "a a"
+        "b c";
+    }
+  }
+
