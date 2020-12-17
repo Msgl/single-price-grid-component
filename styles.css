@@ -33,6 +33,7 @@ body {
     margin: auto;
     max-width: 350px;
     width: 100%;
+    border-radius: 5px;
 }
 
 .item-a, .item-b, .item-c {
