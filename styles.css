@@ -6,44 +6,44 @@
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding:0;
-    box-sizing: border-box;
 }
 
 body {
+    background-color: var(--grayish-blue);
+    color: white;
+    display: grid;
     font-family: 'Karla', sans-serif;
     font-size: 16px;
-    color: white;
-    background-color: var(--grayish-blue);
     height: 100vh;
     width: 100%;
 }
 
 .container {
-    max-width: 520px;
-    width: 90%;
+    box-shadow: 2px 2px 10px rgba(71, 126, 125, 0.411);
     display: grid;
     gap: 0;
-    grid-template-rows: 250px 250px 250px;
     grid-template-areas: 
     "a"
     "b"
     "c";
-    margin: 70px auto auto auto;
-    box-shadow: 2px 2px 10px rgba(71, 126, 125, 0.411);
+    grid-template-rows: repeat(3, 1fr);
+    margin: auto;
+    max-width: 350px;
+    width: 100%;
 }
 
 .item-a, .item-b, .item-c {
-    /* top right bottom left */
-    padding: 20px 30px 10px 30px;
+    padding: 25px 30px;
 }
 
 .item-a {
-    grid-area: a;
     background-color: white;
     border-radius: 5px 5px 0 0;
-    line-height: 1.9em;
+    grid-area: a;
+    line-height: 1.7em;
 }
 
 .item-a h2 {
@@ -60,8 +60,8 @@ body {
 }
 
 .item-b {
-    grid-area: b;
     background-color: hsl(179, 70%, 43%);
+    grid-area: b;
 }
 
 h2 {
@@ -79,38 +79,38 @@ h2 {
 }
 
 .price span {
+    align-self: center;
     color: hsl(204, 43%, 80%);
     font-size: 1em;
-    align-self: center;
     padding: 10px;
 }
 
 button {
-    width:100%;
-    padding: 15px;
-    margin-top: 30px;
     background-color: hsl(71, 73%, 54%);
-    color: white;
-    border: transparent;
     border-radius: 5px;
+    border: transparent;
+    box-shadow: 3px 3px 10px rgba(71, 126, 125, 0.7);
+    color: white;
+    font-family: 'Karla', sans-serif;
     font-size: 1em;
     font-weight: 700;
-    font-family: 'Karla', sans-serif;
     letter-spacing: 1px;
-    box-shadow: 3px 3px 10px rgba(71, 126, 125, 0.7);
+    margin-top: 30px;
+    padding: 15px;
+    width:100%;
 }
 
 .item-c {
-    grid-area: c;
     background-color: hsla(179, 75%, 43%, 0.70);
     border-radius: 0 0 5px 5px;
+    grid-area: c;
 }
 
 li {
-    list-style-type: none;
-    margin-bottom: 5px;
     color: hsl(206, 32%, 91%);
     font-size: 0.9em;
+    list-style-type: none;
+    margin-bottom: 5px;
     padding-left: 0;
 }
 
@@ -124,12 +124,12 @@ li {
     }
 
     .container {
-        max-width: 750px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 2fr 3fr;
         grid-template-areas: 
         "a a"
         "b c";
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr 1.2fr;
+        max-width: 750px;
     }
   }
 
